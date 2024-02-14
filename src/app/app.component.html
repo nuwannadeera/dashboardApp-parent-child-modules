@@ -1,1 +1,9 @@
-<app-dashboard></app-dashboard>
+<h1>Parent Component</h1>
+<!--pass data parent to child component-->
+<app-child-component name="myName" subject="maths"></app-child-component>
+
+<!--send variable data using property binding-->
+<app-child-component [name1]="myName"></app-child-component>
+
+<!--send object data using property binding-->
+<app-child-component [obj]="myObject"></app-child-component>

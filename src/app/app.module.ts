@@ -4,23 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {RouterModule} from "@angular/router";
-import {DashboardModule} from "./dashboard/dashboard.module";
-import {UserlistchildComponent} from "./userlistchild/userlistchild.component";
-import {DashboardPComponent} from "./dashboard-p/dashboard-p.component";
+import { ChildComponentComponent } from './child-component/child-component.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChildComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DashboardModule,
-    RouterModule.forRoot([
-      { path: 'dashboard',
-        loadChildren: () => import('./my-user-list/my-user-list.module')
-          .then((m) => m.MyUserListModule) },
-    ]),
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
